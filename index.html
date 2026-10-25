@@ -35,24 +35,27 @@ section+section{border-top:1px solid var(--rule)}
 h2.sec{font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--accent);text-transform:uppercase;margin-bottom:26px}
 
 .cards{display:grid;gap:26px}
-.card{display:grid;grid-template-columns:300px 1fr;background:var(--card);border:1px solid var(--rule);
-border-radius:12px;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s}
+.card{display:grid;grid-template-columns:340px 1fr;background:var(--card);border:1px solid var(--rule);
+border-radius:12px;overflow:hidden;transition:transform .18s,box-shadow .18s,border-color .18s;
+height:250px}
 .card:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.08);border-color:#cfcabf}
-.card-img{background:#eceae5;overflow:hidden;position:relative}
+.card-img{background:#f2f0ec;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center}
 .card-ph{width:100%;height:100%;min-height:180px;display:flex;align-items:center;justify-content:center;
          background:linear-gradient(135deg,#f0eee9,#e4e1da)}
 .card-ph span{font-size:34px;font-weight:700;color:#c8c4bb;letter-spacing:.06em}
 .card-img img{width:100%;height:100%;object-fit:cover;display:block}
-.card-img.fit-contain img{object-fit:contain;background:#faf9f7;padding:8px}
-.card-body{padding:26px 28px;display:flex;flex-direction:column}
+.card-img img.contain{object-fit:contain;padding:10px}
+
+.card-body{padding:20px 26px;display:flex;flex-direction:column;min-height:0;overflow:hidden}
 .card h3{font-size:19px;font-weight:650;line-height:1.35}
 .card .sub{font-size:12.5px;color:var(--accent);font-weight:500;margin-top:5px}
-.card .tagline{font-size:14px;color:var(--ink2);margin-top:12px;flex:1}
-.card .foot{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px;align-items:center}
+.card .tagline{font-size:14px;color:var(--ink2);margin-top:10px;flex:1;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card .foot{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px;align-items:center;max-height:32px;overflow:hidden}
 .card .foot .chip{margin:0}
 .chip{display:inline-block;font-size:11.5px;padding:3px 9px;border-radius:5px;background:#f4f2ee;color:var(--ink3);margin:0 5px 5px 0}
 .chip.hl{background:var(--accent-soft);color:var(--accent);font-weight:500}
-.card .more{margin-top:16px;font-size:13px;color:var(--accent);font-weight:500}
+.card .more{margin-top:auto;padding-top:8px;font-size:13px;color:var(--accent);font-weight:500}
 .card:hover .more{text-decoration:underline}
 
 .awards{list-style:none;display:grid;gap:2px}
@@ -122,7 +125,7 @@ footer .links{display:flex;gap:20px;margin-bottom:12px}
 
 @media (max-width:760px){
   .hero{padding:48px 0 36px}.hero h1{font-size:30px}
-  .card{grid-template-columns:1fr}.card-img{aspect-ratio:16/10}.card-body{padding:20px}
+  .card{grid-template-columns:1fr;height:auto}.card-img{aspect-ratio:16/10;height:auto}.card-body{padding:18px}
   .gallery{grid-template-columns:1fr}.d-title{font-size:26px}
   .skills{grid-template-columns:1fr}.awards li{flex-direction:column;gap:2px}
   .metrics td:first-child{width:110px}
@@ -157,7 +160,7 @@ footer .links{display:flex;gap:20px;margin-bottom:12px}
   <section id="projects"><div class="wrap">
     <h2 class="sec">项目</h2><div class="cards">
 <a class="card" href="projects/2026-wheel-combat.html">
-  <div class="card-img"><img src="img/robot-hero.jpg" alt="轮式格斗机器人" loading="lazy"></div>
+  <div class="card-img"><img class="" src="img/robot-hero.jpg" alt="轮式格斗机器人" loading="lazy"></div>
   <div class="card-body">
     <h3>轮式格斗机器人</h3>
     <div class="sub">中国机器人大赛武术擂台赛 · 全国一等奖</div>
@@ -167,7 +170,7 @@ footer .links{display:flex;gap:20px;margin-bottom:12px}
   </div>
 </a>
 <a class="card" href="projects/2026-cumcm-a.html">
-  <div class="card-img fit-contain"><img src="img/cumcm-response.jpg" alt="药材烘干的热湿耦合仿真" loading="lazy"></div>
+  <div class="card-img"><img class="contain" src="img/cumcm-response.jpg" alt="药材烘干的热湿耦合仿真" loading="lazy"></div>
   <div class="card-body">
     <h3>药材烘干的热湿耦合仿真</h3>
     <div class="sub">2026 全国大学生数学建模竞赛 · A 题</div>
@@ -177,7 +180,7 @@ footer .links{display:flex;gap:20px;margin-bottom:12px}
   </div>
 </a>
 <a class="card" href="projects/2025-humanoid.html">
-  <div class="card-img fit-contain"><img src="img/humanoid-front.jpg" alt="双足人形机器人" loading="lazy"></div>
+  <div class="card-img"><img class="contain" src="img/humanoid-front.jpg" alt="双足人形机器人" loading="lazy"></div>
   <div class="card-body">
     <h3>双足人形机器人</h3>
     <div class="sub">华为硬件终端挑战赛 · 十六强</div>
