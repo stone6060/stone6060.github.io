@@ -73,7 +73,9 @@ border-bottom:1px solid var(--rule);font-size:14.5px;align-items:baseline}
 .skills dd{color:var(--ink2)}
 .skills .k{display:inline-block;margin:0 6px 6px 0;padding:2px 9px;border-radius:5px;background:#f4f2ee;font-size:13px}
 
-.detail-hero{width:100%;max-height:440px;object-fit:cover;display:block;border-radius:12px;margin:30px 0 34px}
+.detail-hero{width:100%;max-height:440px;object-fit:contain;display:block;border-radius:12px;
+  margin:30px 0 34px;background:#f7f6f3}
+.detail-hero.cover{object-fit:cover;background:none}
 .crumb{font-size:13px;color:var(--ink4);padding:26px 0 0}
 .crumb a:hover{color:var(--accent)}
 .d-title{font-size:34px;font-weight:700;line-height:1.25;margin-top:10px}
@@ -95,6 +97,7 @@ padding-bottom:26px;border-bottom:1px solid var(--rule)}
 .metrics td:last-child{font-variant-numeric:tabular-nums;font-weight:500}
 
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+.gallery.single{grid-template-columns:1fr}
 .gallery img{width:100%;border-radius:10px;display:block;background:#eceae5}
 
 .archive{font-size:14px;color:var(--ink2)}
@@ -153,7 +156,7 @@ footer .links{display:flex;gap:20px;margin-bottom:12px}
     <span>7 人团队</span>
     <span>指导教师 陈浩文、方璐</span>
   </div>
-  <img class="detail-hero" src="../img/robot-hero.jpg" alt="轮式格斗机器人">
+  <img class="detail-hero cover" src="../img/robot-hero.jpg" alt="轮式格斗机器人">
   <p class="d-lead">面向 6cm 擂台对抗赛的自主轮式格斗机器人。STM32F103 + FreeRTOS 下位机负责 16 路传感器实时闭环与决策，树莓派上位机跑 YOLO11n 做目标识别；整机软硬件、结构全自主设计，获国赛一等奖。</p>
 
   <section><h2 class="sec">技术要点</h2><div class="hl-list">
