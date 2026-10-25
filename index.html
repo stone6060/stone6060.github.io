@@ -43,6 +43,7 @@ border-radius:12px;overflow:hidden;transition:transform .18s,box-shadow .18s,bor
          background:linear-gradient(135deg,#f0eee9,#e4e1da)}
 .card-ph span{font-size:34px;font-weight:700;color:#c8c4bb;letter-spacing:.06em}
 .card-img img{width:100%;height:100%;object-fit:cover;display:block}
+.card-img.fit-contain img{object-fit:contain;background:#faf9f7;padding:8px}
 .card-body{padding:26px 28px;display:flex;flex-direction:column}
 .card h3{font-size:19px;font-weight:650;line-height:1.35}
 .card .sub{font-size:12.5px;color:var(--accent);font-weight:500;margin-top:5px}
@@ -166,21 +167,21 @@ footer .links{display:flex;gap:20px;margin-bottom:12px}
   </div>
 </a>
 <a class="card" href="projects/2026-cumcm-a.html">
-  <div class="card-img"><div class="card-ph"><span>药材</span></div></div>
+  <div class="card-img fit-contain"><img src="img/cumcm-response.jpg" alt="药材烘干的热湿耦合仿真" loading="lazy"></div>
   <div class="card-body">
     <h3>药材烘干的热湿耦合仿真</h3>
     <div class="sub">2026 全国大学生数学建模竞赛 · A 题</div>
-    <p class="tagline">针对中药材热风烘干过程建立径向热湿耦合传递模型：节点中心有限体积法离散、刚性积分器推进时间，依次处理常物性、变物性与温湿双向耦合、全域达标事件判定、以及半径收缩的移动边界。四问结果均与 Bessel 级数解析解对照验证，空间二阶收敛。</p>
+    <p class="tagline">把药材烘干建成径向热湿耦合模型——热平衡比质平衡快约 30 倍</p>
     <div class="foot"><span class="chip">Python</span><span class="chip">NumPy</span><span class="chip">SciPy</span><span class="chip">有限体积法</span><span class="chip">BDF 刚性积分</span></div>
     <div class="more">查看详情 →</div>
   </div>
 </a>
 <a class="card" href="projects/2025-humanoid.html">
-  <div class="card-img"><div class="card-ph"><span>双足</span></div></div>
+  <div class="card-img fit-contain"><img src="img/humanoid-front.jpg" alt="双足人形机器人" loading="lazy"></div>
   <div class="card-body">
     <h3>双足人形机器人</h3>
     <div class="sub">华为硬件终端挑战赛 · 十六强</div>
-    <p class="tagline">16 自由度双足人形机器人，自主设计主控板与全身结构。STM32F103ZET6 通过单总线串口驱动 ST3215 舵机完成起身、行走与姿态动作，融合八路灰度循迹、OpenMV 视觉识别与扫码枪三种感知。</p>
+    <p class="tagline">16 自由度双足人形，自主设计主控板与全身结构，单总线驱动全部关节</p>
     <div class="foot"><span class="chip hl">十六强</span><span class="chip">C</span><span class="chip">STM32F103ZET6</span><span class="chip">串口总线舵机 ST3215</span><span class="chip">SCS 协议</span><span class="chip">I2C</span></div>
     <div class="more">查看详情 →</div>
   </div>
